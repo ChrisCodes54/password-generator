@@ -6,45 +6,45 @@ var numbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
 var characters =  ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "+", "?", "/", "-", ":", ";", "[", "]", "{", "}", ".", "<", ">", "=", "_", "`", "|", "~"];
 
 // Write password to the #password input
+
+
+function generatePassword(){
+  var lengthinput = prompt("How long would you like your password to be? (Must be between 8 and 128)")
+  if (lengthinput < 8 || lengthinput > 128) {
+    alert("Must be between 8 and 128 characters")
+    return generatePassword();
+  }
+
+  var lowerinput = confirm("Will this contain lower case letters?")
+  var upperinput = confirm("Will this contain upper case letters?")
+  var numberinput = confirm("Will this contain numbers?")
+  var specialinput = confirm("Will this contain special characters?")
+
+  if (!lowerinput && !upperinput && !numberinput && !specialinput) {
+    alert("You must choose at least 1 criteria")
+    return generatePassword();
+  }
+
+  var randomp = []; 
+  // need to check what has been selected
+
+  if (lowerinput) {
+    // add the lowercase letter to our array, combine array. look up how to make a string to array. 
+  }
+
+}
+
+
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
-  
   passwordText.value = password;
 }
-  function generatePassword(){
-  
-  var userChoice = prompt("How long would you like your password to be? (Must be between 8 and 128) ")
-  var userChoice = prompt("Will this contain lower case letters?")
-  var userChoice = prompt("Will this contain upper case letters?")
-  var userChoice = prompt("Will this contain numbers?")
-  var userChoice = prompt("Will this contain special characters?")
 
 
-
-
-  
-
-  if(!passlength) {
-    alert("you must choose a password length")
-    return;
-  }
-
-  else if (passlength < 8 || passlength > 128) {
-    alert("you must choose a password length between 8 and 128")
-  lowercase = alert("Will this contain lower case letters?")
-  console.log("Lower case " + confirmLower);
-  uppercase = alert("Will this contain upper case letters?")
-  console.log("Upper case " + confirmUpper)
-  numbers = alert("Will this contain numbers?")
-  console.log("Number " + confirmNumber);
-  characters = alert("Will this contain special characters?")
-  console.log("Special Character " + characters)
-  }
-
-}
-
-writePassword();
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
+
+
+
