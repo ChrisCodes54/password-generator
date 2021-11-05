@@ -13,7 +13,7 @@ The password generator has been created in order to ensure well protected passwo
 ## Install
 No install needed.
 ## Usage
-To create randomized password to protect people's accounts/ 
+To create randomized password to protect people's accounts.
 ## License
 No license.
 ## Contributors
